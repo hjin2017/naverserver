@@ -5,13 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import spring_mybatis.EmpController;
-import spring_mybatis.EmpDAO;
-
 @SpringBootApplication
 @ComponentScan 
-@ComponentScan(basePackageClasses =EmpController.class )
-@MapperScan(basePackageClasses = EmpDAO.class)
+@MapperScan(basePackageClasses = MemberDAO.class)
 public class NaverserverprojectApplication {
 
 	public static void main(String[] args) {
