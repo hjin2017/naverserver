@@ -25,6 +25,17 @@
   margin: 30px; 
 }
 
+.loginForm td {
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+.loginForm table {
+    width: 100%;
+}
 .idForm{
   border-bottom: 2px solid #adadad;
   margin: 30px;
@@ -61,7 +72,6 @@
   position:relative;
   left:40%;
   transform: translateX(-50%);
-  margin-bottom: 40px;
   width:80%;
   height:40px;
   background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
@@ -111,9 +121,8 @@ function hjh_login(){
 			alert('성공')
 			$('#login').hide();
 			$('#user').show();
-			input.eq(0).val('')
-			input.eq(1).val('')
 			$('#userName').text(e.process);
+			boardListUP();
 			return;
 		}
 	
@@ -129,6 +138,7 @@ function hjh_login(){
 		{alert(str); return;}
 	
 	ajaxfunction({'st_id':input.eq(0).val(),'pass':input.eq(1).val()},'/hjh_login',login)
+	
 }
 </script>
 </html>

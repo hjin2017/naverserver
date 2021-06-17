@@ -55,7 +55,7 @@ video.addEventListener('play',async () => {
 		
 	    results.forEach((result, i) => {
 		const box = resizedDetections[i].detection.box
-
+		faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
 		if(!isresult&&result.toString().split(' ')[[0]] != 'unknown' ){
 			isresult=true
 			var st_name=result.toString();
@@ -109,7 +109,7 @@ function facetoName(e){
 	input.value = '출석 체크'
 	input.className = 'btn'
 	input.onclick=function(){
-		alert(st_name)
+		alert('출석이 확인 되었습니다')
 		window.close();
 	}
 }

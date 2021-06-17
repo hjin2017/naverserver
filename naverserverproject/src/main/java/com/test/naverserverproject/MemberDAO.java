@@ -14,4 +14,6 @@ public interface MemberDAO {
 	public MemberVO checkMember (MemberVO vo);
 	public void insertMember (MemberVO vo);
 	public String getNameMember(String st_name);
+	
+	public List<BoardVO> getBoard(String st_id);
 }

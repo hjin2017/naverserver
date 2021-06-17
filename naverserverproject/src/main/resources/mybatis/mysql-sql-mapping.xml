@@ -3,6 +3,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.test.naverserverproject.MemberDAO">
 
+<select id="getBoard" resultType="boardVO" parameterType="String">
+SELECT * FROM board WHERE st_id=#{st_id} order by come_in
+</select>
+
 <select id="getOneMember" resultType="memberVO" parameterType="String">
 SELECT * FROM stmember WHERE st_id=#{st_id} 
 </select>
@@ -44,6 +48,5 @@ where R between
 	)
 </insert>
 </mapper>
-
 
 

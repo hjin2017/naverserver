@@ -12,7 +12,7 @@
 .btn {
   position:relative;
   left:50%;
-   transform: translateX(-50%);
+  transform: translateX(-50%);
   width:100%;
   height:40px;
   background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
@@ -36,7 +36,6 @@ background-color: yellow;
 </body>
 <script type="text/javascript">
 const video = document.getElementById('video')
- alert(name)
 
 startVideo()
 function startVideo(){

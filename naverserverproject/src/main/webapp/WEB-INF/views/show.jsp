@@ -19,7 +19,8 @@ $(document).ready(function(){
 			<div id = 'user'style="display: none;">	
 			<%@include file="user.jsp" %>
 		</div>	
-			<div id= 'hjh_owner_show' style="display:none;">
+			<div id= 'board' style="display:none;">
+			<%@include file="board.jsp" %>
 		</div>
 </body>
 </html>

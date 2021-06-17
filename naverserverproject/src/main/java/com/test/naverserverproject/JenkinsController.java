@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Random;
 
@@ -19,7 +20,6 @@ public class JenkinsController {
 	
 	@Autowired
 	MemberDAO serviceMemberDao;
-	
 	
 	@RequestMapping("/jenkins")
 	public String jenkins() {
@@ -127,7 +127,6 @@ public class JenkinsController {
 	public String face_check() {
 		return "attendance_check";
 	}
-	
 	@RequestMapping("/faceMechMember")
 	@ResponseBody
 	public String faceMechMember(String st_name) {
@@ -143,5 +142,14 @@ public class JenkinsController {
 		}
 		eM = "\"성공\"";
 		 return "{\"process\":"+eM+"}"; 
+	}	
+	
+	@RequestMapping("/boardList")
+	@ResponseBody
+	public ArrayList<BoardVO> boardList(String st_id) {
+		  ArrayList<BoardVO> arrDto = (ArrayList<BoardVO>)serviceMemberDao.getBoard(st_id);
+		  System.out.println(arrDto);
+		 return  arrDto;
+		
 	}	
 }
